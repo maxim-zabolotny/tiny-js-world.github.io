@@ -1,7 +1,7 @@
   const phrases = {
    cat: 'Meow!',
    dog: 'bark-bark!',
-   man: 'Olla ',
+   man: 'Hello',
    woman: 'Hi ',
  };
  
@@ -58,7 +58,15 @@
    gender,
    friends,
  }) => {
-   return `Hello! I am ${species}, my name is ${name}, my gender is ${gender}, I have ${hands || '0'} arms and ${legs} legs and you know what: ${saying}. My friends: ${friends}`;
+   return [
+     `${saying}, `,
+     `I am ${species}, `,
+     `my name is ${name}, `,
+     `my gender is ${gender}, `,
+     `I have ${hands || '0'} arms `,
+     `and ${legs} legs. `,
+     `My friends: ${friends}.`,
+   ].join(' ')
  };
  
  inhabitants.forEach((habitant) => print(makeFormatOutput(habitant), 'h5'));
