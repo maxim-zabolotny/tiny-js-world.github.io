@@ -15,17 +15,17 @@ class Creature {
 
   toString() {
     let template = [
-      `name: ${this.name}; `,
-      `gender: ${this.gender}; `,
-      `species: ${this.species}; `,
-      `saying: ${this.saying}; `,
-      `legs: ${this.legs}; `,
-    ];
+      `name: ${this.name}`,
+      `gender: ${this.gender}`,
+      `species: ${this.species}`,
+      `saying: ${this.saying}`,
+      `legs: ${this.legs}`,
+    ]
 
     if (this.friends.length > 0) {
       template.push(`friends: ${this.friends}; `);
     }
-    return template.join('');
+    return template.join('; ');
   }
 }
 
@@ -48,7 +48,7 @@ class Human extends Creature {
   }
 
   toString() {
-    return [super.toString(), `hands: ${this.hands}`].join('');
+    return [super.toString(), `hands: ${this.hands}`].join('; ');
   }
 }
 
